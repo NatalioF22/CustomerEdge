@@ -1,0 +1,27 @@
+{%include 'base.html'%}
+{%block content%}
+<title>Login</title>
+    <div class="container-xxl text-light col-md-6 offset-md-3">
+        {%if user.is_authenticated %}
+        hello world
+        {%else%}
+        <h1>Login<h1>
+            <br><br/>
+       <form method=POST action="{% url 'home' %}">
+            {%csrf_token%}
+            <div class="mb-3">
+                <label  class="form-label" name = "">Username</label>
+                <input type="text" class="form-control" name="username" placeholder="Enter your Username" required>
+                <div id="" class="form-text">We'll never share your username with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" >Password</label>
+                <input type="password" class="form-control" name="password" placeholder="Enter your Password" required>
+              </div>
+             
+              <button type="submit" class="btn btn-primary">Login</button>
+       </form>
+        {%endif%}
+       
+    </div>
+{%endblock%}
