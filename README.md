@@ -1,6 +1,10 @@
 # CustomerEdge
 
 This is a Django Customer Record Management project. It is a web application that allows you to manage customer records efficiently. It provides functionality to create, view, update, and delete customer records, as well as search and filter records.
+![Screenshot 2023-07-01 103428](https://github.com/NatalioF22/CustomerEdge/assets/116610989/24b70031-078c-4ca1-b83c-a3f5c4e0bd0e)
+![Screenshot 2023-07-01 103505](https://github.com/NatalioF22/CustomerEdge/assets/116610989/ef6a66b4-15a8-4022-8370-3d4c26d48742)
+![Screenshot 2023-07-01 103524](https://github.com/NatalioF22/CustomerEdge/assets/116610989/0172358f-8243-4bc4-980a-e44bd80b7db3)
+![Screenshot 2023-07-01 103537](https://github.com/NatalioF22/CustomerEdge/assets/116610989/6bf1645c-0dcb-45b2-8238-87c95e8f278d)
 
 ## Features
 
@@ -32,7 +36,7 @@ To set up the project locally, follow these steps:
 1. Clone the repository:
 
 ```
-git clone <repository_url>
+git clone [<repository_url>](https://github.com/NatalioF22/CustomerEdge.git)
 ```
 
 2. Navigate to the project directory:
