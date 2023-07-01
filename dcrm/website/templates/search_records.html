@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+
+{% block content%}
+<div class="container-xxl text-center justify-content-center text-light">
+
+    
+    {% if searched %}
+        <h1>You Searched for ... {{searched}}</h1><br>
+        {%for record in records%}
+        <div class="card  col-md-6 offset-md-3 mt-2">
+            <a href="{% url 'record' record.id %}">{{record}}</a><br>
+        </div>
+        {%endfor%}
+        
+    {% else %}
+    <h1>Hey! For forgot to search for a Record...</h1>
+    {%endif%}
+
+        
+
+</div>
+
+{% endblock %}
+
+

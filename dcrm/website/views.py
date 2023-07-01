@@ -3,6 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from .forms import SignUpForm
 from .models import Record
+from django.db.models import Q
 from .forms import AddRecordForm
 # Create your views here.
 def home(request):
@@ -94,4 +95,21 @@ def update_record(request, pk):
         return redirect('home')
 
         
+def search_records(request):
+    if request.method == "POST":
+        searched = request.POST['searched']
+        records = Record.objects.filter(
+            Q(first_name__contains=searched)| 
+            Q(last_name__contains=searched) |  
+            Q(email__contains=searched) | 
+            Q(address__contains=searched) | 
+            Q(city__contains=searched)| 
+            Q(state__contains=searched) |  
+            Q(phone__contains=searched) |  
+            
+            Q(zip_code__contains=searched) )
+              
+        return render(request, 'search_records.html', {'searched': searched, 'records': records})
+    else:
+        return render(request, 'search_records.html', {})
         
