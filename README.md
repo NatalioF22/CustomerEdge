@@ -1,0 +1,147 @@
+# Everlasting-Smiles
+
+This is a Django Customer Record Management project. It is a web application that allows you to manage customer records efficiently. It provides functionality to create, view, update, and delete customer records, as well as search and filter records based on various criteria.
+
+## Features
+
+- User Authentication: The application supports user registration, login, and authentication to ensure secure access to the customer record management system.
+
+- Customer Record CRUD Operations: Users can perform Create, Read, Update, and Delete operations on customer records. They can add new customers, view details of existing customers, update customer information, and delete customer records when necessary.
+
+- Search and Filter: The application allows users to search for specific customers based on attributes like name, email, phone number, or any other relevant criteria. Users can also apply filters to narrow down the displayed records based on specific conditions.
+
+- User Permissions: The system provides role-based access control, allowing administrators to define different levels of access for users. This ensures that only authorized users can perform certain operations, such as creating or deleting records.
+
+- Responsive Design: The user interface is designed to be responsive and accessible across different devices and screen sizes, providing a seamless experience for users on desktop and mobile devices.
+
+## Technologies Used
+
+- Python: The project is built using the Django framework, which is a high-level Python web framework that simplifies the development of web applications.
+
+- Django: Django provides a robust set of tools and features for building web applications, including the ORM (Object-Relational Mapping) for database operations, URL routing, form handling, and user authentication.
+
+- Bootstrap: Bootstrap, a popular CSS framework, is used to enhance the frontend design and make the application responsive and visually appealing.
+
+- Database: The project utilizes a database system supported by Django, such as SQLite3 store customer records and related data.
+
+## Setup and Installation
+
+To set up the project locally, follow these steps:
+
+1. Clone the repository:
+
+git clone <repository_url>
+
+2. Navigate to the project directory:
+
+cd django-customer-record-management
+```
+
+3. Create a virtual environment:
+
+```
+python -m venv venv
+```
+
+4. Activate the virtual environment:
+
+- On Windows:
+```
+venv\Scripts\activate
+```
+
+- On macOS and Linux:
+```
+source venv/bin/activate
+```
+
+5. Install the required dependencies:
+
+```
+pip install -r requirements.txt
+```
+
+6. Set up the database:
+
+- Update the database settings in `settings.py` file to configure the database connection and credentials.
+
+- Run migrations to create the necessary database tables:
+
+```
+python manage.py migrate
+```
+
+7. Start the development server:
+
+```
+python manage.py runserver
+```
+
+8. Access the application in your web browser:
+
+```
+http://localhost:8000
+```
+
+## Contribution
+
+Contributions to this project are welcome! If you encounter any issues, have suggestions, or would like to contribute new features or improvements, feel free to submit a pull request or open an issue in the GitHub repository.
+
+Please ensure to follow the established coding style, provide clear commit messages, and adhere to best practices when making contributions.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code for personal or commercial projects.
+
+```
+
+Note: Make sure to update the sections with relevant information specific to your project, such as project description, features, technologies used, setup
+
+
+
+git clone <repository_url>
+
+css
+Copy code
+2. Navigate to the project directory:
+cd django-customer-record-management
+
+arduino
+Copy code
+3. Create a virtual environment:
+python -m venv venv
+
+markdown
+Copy code
+4. Activate the virtual environment: - On Windows:
+venv\Scripts\activate
+
+diff
+Copy code
+- On macOS and Linux:
+source venv/bin/activate
+
+markdown
+Copy code
+5. Install the required dependencies:
+pip install -r requirements.txt
+
+markdown
+Copy code
+6. Set up the database: - Update the database settings in `settings.py` file to configure the database connection and credentials. - Run migrations to create the necessary database tables:
+python manage.py migrate
+
+markdown
+Copy code
+7. Start the development server:
+python manage.py runserver
+
+markdown
+Copy code
+8. Access the application in your web browser:
+http://localhost:8000
+
+css
+Copy code
+## Contribution Contributions to this project are welcome! If you encounter any issues, have suggestions, or would like to contribute new features or improvements, feel free tosubmit a pull request or open an issue in the GitHub repository. Please ensure to follow the established coding style, provide clear commit messages, and adhere to best practices when making contributions. ## License This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code for personal or commercial projects.
+Note: Make sure to update the sections with relevant information specific to your project, such as project description, features, technologies used, setup
