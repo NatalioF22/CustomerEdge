@@ -96,20 +96,24 @@ def update_record(request, pk):
 
         
 def search_records(request):
-    if request.method == "POST":
-        searched = request.POST['searched']
-        records = Record.objects.filter(
-            Q(first_name__contains=searched)| 
-            Q(last_name__contains=searched) |  
-            Q(email__contains=searched) | 
-            Q(address__contains=searched) | 
-            Q(city__contains=searched)| 
-            Q(state__contains=searched) |  
-            Q(phone__contains=searched) |  
-            
-            Q(zip_code__contains=searched) )
-              
-        return render(request, 'search_records.html', {'searched': searched, 'records': records})
+    if request.user.is_authenticated:
+        if request.method == "POST":
+            searched = request.POST['searched']
+            records = Record.objects.filter(
+                Q(first_name__contains=searched)| 
+                Q(last_name__contains=searched) |  
+                Q(email__contains=searched) | 
+                Q(address__contains=searched) | 
+                Q(city__contains=searched)| 
+                Q(state__contains=searched) |  
+                Q(phone__contains=searched) |  
+                
+                Q(zip_code__contains=searched) )
+                
+            return render(request, 'search_records.html', {'searched': searched, 'records': records})
+        else:
+            return render(request, 'search_records.html', {})
     else:
-        return render(request, 'search_records.html', {})
         
+        messages.info(request, "You must be logged in to view this page")
+        return redirect('home')

@@ -2,7 +2,7 @@
 
 {% block content%}
 <div class="container-xxl text-center justify-content-center text-light">
-
+    {%if user.is_authenticated %}
     
     {% if searched %}
         <h1>You Searched for ... {{searched}}</h1><br>
@@ -13,9 +13,9 @@
         {%endfor%}
         
     {% else %}
-    <h1>Hey! For forgot to search for a Record...</h1>
+    <h1>Hey! You Forgot to search for a Record...</h1>
     {%endif%}
-
+{%endif%}
         
 
 </div>
